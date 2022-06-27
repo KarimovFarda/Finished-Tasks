@@ -1,0 +1,399 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../src/components/fonts/Proxima\ Nova\ Font.otf");
+}
+body {
+  background-color:#F5F5F5;
+  position: relative;  
+}
+.header {
+  width: 100vw;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  .headerElements {
+    height: 90px;
+    display: flex;
+    background-color: #FFFFFF;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    max-width: calc(100% - 112px);
+    span{
+      border: none;
+    }
+    &>img {
+      max-width: 146px;
+      margin-left: 16px;
+    }
+    &>a {
+      display: flex;
+      align-items: center;
+      column-gap: 4px;
+      margin: 0 46px;
+    }
+    &>input {
+      background: #F1F1F5;
+      border-radius: 30px;
+      padding: 10px 15px 10px 38px;
+      border: none;
+      min-width: 355px;
+      background-image: url("../public/images/Group.png");
+      background-repeat: no-repeat;
+      background-position: 15px 8px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      margin-right: 30px;
+      color: #616173;
+    }
+  
+    .header-icons {
+      display: flex;
+      column-gap: 21px;
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        span {
+          font-family: 'Proxima Nova';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 11px;
+          line-height: 13px;
+          text-align: center;
+          letter-spacing: 0.03em;
+          color: #231F20;
+          position: absolute;
+          left: 15px;
+          top: 0;
+          background: #F9C20A;
+          border-radius: 27px;
+          padding: 1px 4px;
+        }
+      }
+  
+      img:nth-child(3) {
+        margin-right: -10px;
+      }
+    }
+    span {
+      margin-right: -10px;
+    }
+    .userDetails {
+      margin-left: 27px;
+      p {
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 16px;
+        text-align: right;
+        letter-spacing: 0.03em;
+        color: #231F20;
+        text-align: left;
+      }
+      span {
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        letter-spacing: 0.03em;
+        color: #616173;
+        white-space: nowrap;
+      }
+    }
+
+
+a {
+  font-family: 'Proxima Nova';
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  color: #474C54;
+  text-decoration: none;
+}
+  }
+}
+
+.aside {
+  width: 130px;
+  background: #FFFFFF;
+  height: calc(100vh - 90px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 13px;
+  padding-top: 10px;
+  position: absolute;
+  top: 91px;
+  &>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 4px;
+    &>div {
+      background: #D4D8E2;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.active {
+        background: #FAA61A;
+      }
+    }
+
+    p {
+      font-family: 'Proxima Nova';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      color: #616173;
+    }
+  }
+}
+
+.container {
+  width: calc(100vw - 130px);
+  display: flex;
+  position: relative;
+  left: 130px;
+  height: 55px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 111px;
+  div {
+    &:first-child {
+      span {
+        padding: 8px 11px 10px 11px;
+      }
+    }
+
+    p {
+      font-family: 'Proxima Nova';
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.05em;
+      color: #000000;
+      span {
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 12px;
+        margin-left: 7px;
+        text-align: center;
+        border: 1px solid #FAA61A;
+        border-radius: 15px;
+        color: #F58220;
+        padding: 8px 7px 10px 8px;
+        position: relative;
+        top: -2px;
+      }
+    }
+  }
+}
+
+.table-container {
+  width: calc(100vw - 240px);
+  position: relative;
+  left: 130px;
+  padding: 0 111px;
+  margin-top: 19px;
+  padding-right: 0;
+  .table-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    h1 {
+      font-family: 'Proxima Nova';
+      font-size: 30px;
+      line-height: 37px;
+      letter-spacing: 0.03em;
+      color: #000000;
+    }
+    &>div {
+      display: flex;
+      column-gap: 30px;
+      align-items: center;
+      border: 1px solid #E7E7E7;
+      border-radius: 48px;
+      padding-right: 20px;
+      p,
+      span {
+        font-family: 'Cufont';
+        font-size: 14px;
+        line-height: 14px;
+        text-align: center;
+        color: #616173;
+      }
+      p {
+        background: #FFFFFF;
+        border: 1px solid #E6E6E6;
+        box-shadow: 0px 2px 4px rgba(97, 97, 115, 0.15);
+        border-radius: 48px;
+        padding: 18px 20px 19px 22px;
+      }
+      &>div {
+        display: flex;
+        flex-direction: column;
+        row-gap: 4px;
+        span {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+
+  table {
+    width: 100%;
+    margin-top: 13px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    border-collapse: collapse;
+    padding-right: 43px;
+
+    tr th:first-child{
+      padding-left: 31px;
+    }
+    tr td:first-child{
+      padding-left: 31px;
+    }
+  }
+
+  table,
+  th,
+  td {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .align-right{
+    text-align: center !important;
+    width: 115px;
+  }
+
+  th {
+    padding-top: 14px;
+    padding-bottom: 16px;
+    font-family: 'Proxima Nova';
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: left !important;
+    text-align: right;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #9696AA;
+    &:first-child{
+      display: flex;
+      column-gap: 9.7px;
+      justify-content: left;
+      align-items: center;
+    }
+  }
+  td {
+    padding-top: 26px;
+    padding-bottom: 24px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width:1440px){
+
+  .aside {
+    row-gap: 10px;
+    & > div {
+      & > div{
+        width: 37px;
+        height: 37px;
+      }
+    }
+  } 
+
+  .header{
+    .headerElements{
+      a{
+        margin: 0 30px;
+      }
+      input{
+        min-width:300px !important;
+        margin-right: 25px !important;
+      }
+      .header-icons{
+        column-gap: 17px;
+      }
+      img{
+        max-width: 130px;
+      }
+    }
+  }
+
+}
+@media screen and (max-width:1200px){
+  .headerElements{
+    .header-icons,input, & > a:not(:first-child){
+      display: none !important;
+    }
+    
+
+  }
+}
+@media screen and (max-width:576px){
+  .aside{
+    display: none;
+  }
+  .container{
+    flex-direction: column;
+    margin-top: 0;
+    padding: 20px 0;
+    width: 100%;
+    left: 0;
+    height: initial;
+    row-gap: 20px;
+    background-color: #ffffff;
+    box-shadow: none;
+  }
+  .table-container{
+    padding: 0;
+    left: 0;
+    width: initial;
+    margin-top: 20px;
+    td{
+      text-align: center;
+    }
+    h1{
+      margin-bottom: 10px;
+    }
+    & > div:last-child{
+      overflow-x: auto;
+      padding-left: 20px;
+    }
+  }
+  .table-heading{
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+  table th{
+    min-width: 150px;
+  }
+}
