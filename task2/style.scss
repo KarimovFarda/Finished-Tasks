@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    h1{
+        text-align: center;
+        margin:20px 0;
+    }
+    input{
+        width:300px;
+        border-radius: 20px;
+        background-color: #EFEFEF;
+        border:none;
+        height: 50px;
+        padding-left: 10px;
+        display: block;
+        margin:auto
+    }
+    span{
+        text-align: center;
+        display: block;
+        margin: 10px 0;
+    }
+    button{
+        display: block;
+        margin: auto;
+        padding: 10px 25px;
+        background-color: #DDDDDD;
+        border-radius: 20px;
+        border:none;
+        margin-top: 20px;
+    }
+}
