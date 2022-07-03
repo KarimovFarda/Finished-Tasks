@@ -9,7 +9,7 @@ const initialState: ITasksArr = {
 export default function tasksReducer(
   state: ITasksArr = initialState,
   action: Actions
-): ITasksArr {
+) {
   switch (action.type) {
     case TASKS_ACTIONS.ADD_TASKS: {
       return { ...state, tasks: action.payload };
