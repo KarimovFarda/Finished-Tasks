@@ -1,4 +1,4 @@
-import { HttpClient } from "../httpClient/index";
+import { HttpClient } from "./httpRequest";
 
 class MemberService extends HttpClient {
     constructor(){
