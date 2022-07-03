@@ -1,40 +1,19 @@
 import axios from "axios";
 export class HttpClient {
-  baseUrl;
   constructor(url) {
     this.baseUrl = url;
   }
   async get(url) {
-    const token = localStorage.getItem("token");
-    return await axios.get(`${this.baseUrl}/${url}`, {
-      headers: {
-        Authorization: token,
-      },
-    });
+    return await axios.get(`${this.baseUrl}/${url}`);
   }
   async post(url, data) {
-    const token = localStorage.getItem("token");
-    return await axios.post(`${this.baseUrl}/${url}`, data, {
-      headers: {
-        Authorization: token,
-      },
-    });
+    return await axios.post(`${this.baseUrl}/${url}`, data);
   }
   async delete(url) {
-    const token = localStorage.getItem("token");
-    return await axios.delete(`${this.baseUrl}/${url}`, {
-      headers: {
-        Authorization: token,
-      },
-    });
+    return await axios.delete(`${this.baseUrl}/${url}`);
   }
 
   async edit(url, data) {
-    const token = localStorage.getItem("token");
-    return await axios.put(`${this.baseUrl}/${url}`, data, {
-      headers: {
-        Authorization: token,
-      },
-    });
+    return await axios.put(`${this.baseUrl}/${url}`, data);
   }
 }
