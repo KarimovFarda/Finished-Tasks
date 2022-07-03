@@ -14,7 +14,7 @@ class TaskService extends HttpClient {
     }
 
     updateTask(data, id){
-        return this.put(`task/${id}`, data, id);
+        return this.edit(`task/${id}`, data, id);
     }
 
 
