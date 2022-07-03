@@ -31,11 +31,10 @@ export const addTasks = (payload: any, id: Number) => (dispatch: Dispatch) => {
 };
 
 export const editTasks =
-  (payload: any, userId: Number, taskId: Number) => (dispatch: Dispatch) => {
+  (payload: any, taskId: Number) => (dispatch: Dispatch) => {
     request
       .edit(`task/${taskId}`, payload)
       .then((response) => {
-        console.log("edited data", response.data);
         dispatch({
           type: TASKS_ACTIONS.EDIT_TASKS,
           payload: response,
@@ -46,10 +45,9 @@ export const editTasks =
 
 
 export const deleteTasks =
-  (userId: Number, productId: Number) => (dispatch: Dispatch) => {
-    console.log(request)
+  (taskId: Number) => (dispatch: Dispatch) => {
     request
-      .delete(`task/${productId}`)
+      .delete(`task/${taskId}`)
       .then((response) =>
         dispatch({
           type: TASKS_ACTIONS.DELETE_TASKS,
