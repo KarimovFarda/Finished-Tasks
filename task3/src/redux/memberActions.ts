@@ -30,34 +30,5 @@ export const addMembers = (payload: any, id: Number) => (dispatch: Dispatch) => 
     .catch((err) => console.error(err));
 };
 
-export const editMembers =
-  (payload: any, userId: Number, taskId: Number) => (dispatch: Dispatch) => {
-    request
-      .edit(`member/${taskId}`, payload)
-      .then((response) => {
-        console.log("edited data", response.data);
-        dispatch({
-          type: MEMBERS_ACTION.EDIT_MEMBERS,
-          payload: response,
-        });
-      })
-      .catch((err) => console.error(err));
-  };
-
-
-export const deleteMembers =
-  (userId: Number, productId: Number) => (dispatch: Dispatch) => {
-    request
-      .delete(`Member/${productId}`)
-      .then((response) =>
-        dispatch({
-          type: MEMBERS_ACTION.DELETE_MEMBERS,
-          payload: response,
-        })
-      )
-      .catch((err) => console.error(err));
-  };
-
-
 export type MemberActions = IActionGetMembers;
 export type DispatchType = (args: IMembersArr) => IMembersArr;
