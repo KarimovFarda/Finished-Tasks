@@ -10,7 +10,7 @@ const initialState: IMembersArr = {
 export function membersReducer(
   state: IMembersArr = initialState,
   action: MemberActions
-): IMembersArr {
+) {
   switch (action.type) {
     case MEMBERS_ACTION.ADD_MEMBERS: {
       return { ...state, members: action.payload };
