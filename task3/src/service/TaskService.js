@@ -19,7 +19,6 @@ class TaskService extends HttpClient {
 
 
 }
-console.log(window.location.origin.replace("3000","8502") + "/tasks")
 
 
 export const taskService = new TaskService();
