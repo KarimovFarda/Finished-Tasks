@@ -1,4 +1,4 @@
-import { ITasksArr } from "../utils/models/types";
+import { ITasksArr } from "../services/models/types";
 import { Actions } from "./taskActions";
 import { TASKS_ACTIONS } from "./constants";
 

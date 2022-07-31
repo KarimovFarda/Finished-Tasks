@@ -1,6 +1,6 @@
 import { Dispatch } from "redux";
-import { IMember, IMembersArr } from "../utils/models/types";
-import { HttpClient } from "../utils/service/httpRequest";
+import { IMember, IMembersArr } from "../services/models/types";
+import { HttpClient } from "../services/service/httpRequest";
 import { MEMBERS_ACTION } from "./constants";
 
 interface IActionAddMembers {

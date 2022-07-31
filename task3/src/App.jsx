@@ -1,8 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Main from './components/main';
-import Login from './components/Register-Login/login';
-import Register from './components/Register-Login/register';
-import Admin from './components/Register-Login/admin';
+import { MainPage,LoginPage, RegisterPage, AdminPage } from './pages';
 import PrivateRoute from './components/privateRoute';
 function App() {
 
@@ -10,14 +7,14 @@ function App() {
   return (
     <Router>
     <Routes>
-      <Route path="/login" element={ <Login/> }/>
-      <Route path="/" element={ <Register/> }/>
-    <Route path="/admin" element= { <Admin />}/>
+      <Route path="/login" element={ <LoginPage/> }/>
+      <Route path="/" element={ <RegisterPage/> }/>
+    <Route path="/admin" element= { <AdminPage />}/>
     <Route
           path="/task"
           element={
             <PrivateRoute>
-              <Main />
+              <MainPage />
             </PrivateRoute>
           }
         />
