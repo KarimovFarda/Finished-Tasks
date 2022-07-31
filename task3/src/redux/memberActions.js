@@ -1,12 +1,7 @@
-import { Dispatch } from "redux";
-import { IMember, IMembersArr } from "../services/models/types";
 import { HttpClient } from "../services/service/httpRequest";
 import { MEMBERS_ACTION } from "./constants";
 
-interface IActionAddMembers {
-  type: "ADD_MEMBERS";
-  payload: IMember[];
-}
+
 const request = new HttpClient("https://62b87e12f4cb8d63df5ec8f1.mockapi.io/");
 
 export async function getMembers(){
@@ -14,7 +9,7 @@ export async function getMembers(){
     .get(`Member`)
 };
 
-export const addMembers = (payload: any, id: Number) => (dispatch: Dispatch) => {
+export const addMembers = (payload, id) => (dispatch) => {
   request
     .post(`Member`, payload)
     .then((response) => {
@@ -26,5 +21,3 @@ export const addMembers = (payload: any, id: Number) => (dispatch: Dispatch) => 
     .catch((err) => console.error(err));
 };
 
-export type MemberActions = IActionAddMembers;
-export type DispatchType = (args: IMembersArr) => IMembersArr;

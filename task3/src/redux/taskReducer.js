@@ -1,14 +1,12 @@
-import { ITasksArr } from "../services/models/types";
-import { Actions } from "./taskActions";
 import { TASKS_ACTIONS } from "./constants";
 
 
-const initialState: ITasksArr = {
+const initialState = {
   tasks: []
 };
 export default function tasksReducer(
-  state: ITasksArr = initialState,
-  action: Actions
+  state = initialState,
+  action
 ) {
   switch (action.type) {
     case TASKS_ACTIONS.ADD_TASKS: {

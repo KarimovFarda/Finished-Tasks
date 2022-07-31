@@ -1,14 +1,12 @@
-import { IMembersArr } from "../services/models/types";
-import { MemberActions } from "./memberActions";
 import { MEMBERS_ACTION } from "./constants";
 
 
-const initialState: IMembersArr = {
+const initialState = {
   members: []
 };
 export function membersReducer(
-  state: IMembersArr = initialState,
-  action: MemberActions
+  state = initialState,
+  action
 ){
   switch (action.type) {
     case MEMBERS_ACTION.ADD_MEMBERS: {

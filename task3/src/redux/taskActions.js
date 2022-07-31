@@ -1,19 +1,14 @@
-import { Dispatch } from "redux";
-import { ITasks, ITasksArr } from "../services/models/types";
 import { HttpClient } from "../services/service/httpRequest";
 import { TASKS_ACTIONS } from "./constants";
 
-interface IActionAddTasks {
-  type: "ADD_TASKS";
-  payload: ITasks[];
-}
+
 const request = new HttpClient("https://61e2d0883050a1001768228f.mockapi.io/api/v1");
 export async function getTasks(){
   return await request
     .get(`task`)
 };
 
-export const addTasks = (payload: any, id: Number) => (dispatch: Dispatch) => {
+export const addTasks = (payload, id) => (dispatch) => {
   request
     .post(`task`, payload)
     .then((response) => {
@@ -26,7 +21,7 @@ export const addTasks = (payload: any, id: Number) => (dispatch: Dispatch) => {
 };
 
 export const editTasks =
-  (payload: any, taskId: Number) => (dispatch: Dispatch) => {
+  (payload, taskId) => (dispatch) => {
     request
       .edit(`task/${taskId}`, payload)
       .then((response) => {
@@ -40,7 +35,7 @@ export const editTasks =
   };
 
 export const deleteTasks =
-( taskId: Number) => (dispatch: Dispatch) => {
+( taskId) => (dispatch) => {
     request
       .delete(`task/${taskId}`)
       .then((response) =>
@@ -52,5 +47,3 @@ export const deleteTasks =
       .catch((err) => console.error(err));
   };
 
-export type Actions = IActionAddTasks;
-export type DispatchType = (args: ITasksArr) => ITasksArr;
