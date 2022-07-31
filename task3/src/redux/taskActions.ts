@@ -1,6 +1,6 @@
 import { Dispatch } from "redux";
-import { ITasks, ITasksArr } from "../models/types";
-import { HttpClient } from "../service/httpRequest";
+import { ITasks, ITasksArr } from "../utils/models/types";
+import { HttpClient } from "../utils/service/httpRequest";
 import { TASKS_ACTIONS } from "./constants";
 
 interface IActionAddTasks {

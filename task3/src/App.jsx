@@ -12,9 +12,7 @@ function App() {
     <Routes>
       <Route path="/login" element={ <Login/> }/>
       <Route path="/" element={ <Register/> }/>
-
     <Route path="/admin" element= { <Admin />}/>
-      
     <Route
           path="/task"
           element={

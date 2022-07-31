@@ -1,4 +1,4 @@
-import { IMembersArr } from "../models/types";
+import { IMembersArr } from "../utils/models/types";
 import { MemberActions } from "./memberActions";
 import { MEMBERS_ACTION } from "./constants";
 

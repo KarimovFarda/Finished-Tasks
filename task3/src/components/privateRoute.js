@@ -1,14 +1,12 @@
-import React from "react";
-import { Redirect } from "react-router";
-import { Route } from "react-router-dom";
-
+import React from 'react'
+import { Navigate } from 'react-router-dom';
 export const PrivateRoute = ({ children}) => {
   const isAuthenticated = localStorage.getItem("token");;
-  if (isAuthenticated || sessionStorage.getItem("user")) {
+  if (isAuthenticated) {
     return children
-  }
-    window.location.href="login"
-  return <Route path="/redirect" element={ <Redirect to="/login" /> } />
+  }else{
+    return  <Navigate to="/login" />
+  }  
 }
 
 export default PrivateRoute
