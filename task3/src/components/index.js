@@ -1,0 +1,5 @@
+export {default as Admin} from './Admin/admin'
+export {default as Login} from './Login/login'
+export {default as Member} from './/Member/index'
+export {default as Task} from './Task/index'
+export {default as Register} from './Sign Up/register'
